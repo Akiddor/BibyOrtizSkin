@@ -14,14 +14,16 @@ body {
 }
 
 .card-container {
-    width: 45rem;
-    border: 2px solid #fafafa10;
+    max-width: 90%; /* Ajusta el ancho máximo al tamaño de la pantalla */
+    margin: 0 auto;
     padding: 20px;
+    border: 2px solid #fafafa10;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.1); /* Asegura que el fondo sea transparente */
-    backdrop-filter: blur(10px); /* Ajusta el desenfoque según sea necesario */
+    background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    backdrop-filter: blur(10px); /* Ajusta el desenfoque si es necesario */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
 }
 
 /* Efecto de vidrio */
@@ -74,6 +76,11 @@ h1::after {
 .profile-name {
     font-size: 28px;
     margin-bottom: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
 }
 
 /* Información adicional */
@@ -276,40 +283,48 @@ h1::after {
     background-color: rgb(48, 12, 12);
 }
 
+
 .treatment-content {
     display: none;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     margin-top: 10px;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    transition: max-height 0.3s ease-out; /* Suaviza la transición de despliegue */
+    overflow-x: auto; /* Permite desplazamiento horizontal en el contenedor */
 }
 
 .treatment-content.show {
     display: block;
+    max-height: 1000px; /* Ajusta un valor alto para permitir el despliegue completo */
 }
 
-.price-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
+    .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+        display: block; /* Hacer que la tabla sea un bloque para permitir el desplazamiento */
+    }
 
-.price-table th,
-.price-table td {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: center;
-}
+    .price-table th, .price-table td {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        white-space: nowrap; /* Evita que el contenido se ajuste y cause un desbordamiento */
+    }
 
-.price-table th {
-    background-color: rgba(69, 16, 16, 0.1);
-    color: rgb(69, 16, 16);
-}
+    .price-table th {
+        background-color: rgba(69, 16, 16, 0.1);
+        color: rgb(69, 16, 16);
+    }
 
-.price-table td {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-/* Table */
+    .price-table td {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+
 
 
 
@@ -363,6 +378,11 @@ h1::after {
 .details-column {
     flex: 1;
     margin: 0;
+    
+}
+.image-gallery {
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .details-column ul {
