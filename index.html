@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biby Ortiz Skin & Body</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="card-container glass-effect">
+        <!-- Profile Picture -->
+        <img class="profile-picture" src="./img/profile.jpg" alt="Foto de perfil">
+
+        <!-- Profile Name -->
+        <div class="profile-name">
+            <h1 class="lines-effect">Biby Ortiz Skin & Body</h1>
+            <div class="info">
+                <p>En Biby Ortiz Skin & Body, creemos en la fusión perfecta entre salud y belleza. Nos dedicamos a
+                    ofrecer una experiencia única y personalizada en un ambiente relajante, donde cada tratamiento está
+                    diseñado para resaltar tu mejor versión.</p>
+            </div>
+        </div>
+
+        <!-- Treatments Section -->
+        <div class="treatments">
+            <h2>Tratamientos Ofrecidos</h2>
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamientos-reductivos')">Tratamientos Reductivos con Aparatología</button>
+                <div id="tratamientos-reductivos" class="new-treatment-content">
+                    <div class="new-treatment-details">
+                        <div class="new-details-columns">
+                            <div class="details-column">
+                                <h3>Incluye:</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Drenaje linfático</li>
+                                    <li><i class="fas fa-check"></i> Cavitación</li>
+                                    <li><i class="fas fa-check"></i> Radiofrecuencia</li>
+                                    <li><i class="fas fa-check"></i> Lipolaser</li>
+                                    <li><i class="fas fa-check"></i> Vacumm</li>
+                                    <li><i class="fas fa-check"></i> Gel reductivo</li>
+                                    <li><i class="fas fa-check"></i> Masaje reductivo</li>
+                                </ul>
+                                <h3>Precios:</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> 6 sesiones: $1500</li>
+                                    <li><i class="fas fa-check"></i> 8 sesiones: $2000</li>
+                                    <li><i class="fas fa-check"></i> 10 sesiones: $2500</li>
+                                </ul>
+                                <p><strong>*Tratamiento personalizado, se pueden trabajar 2 áreas*</strong></p>
+                            </div>
+                            <div class="details-column">
+                                <h3>Imágenes:</h3>
+                                <div class="image-gallery">
+                                    <img src="https://www.vesself.com/storage/img/KFmuSR4hKdQa-Vesself_galeria_duoreductivo3.jpg" alt="Imagen 1" class="treatment-image">
+                                    <img src="https://cuponassets.cuponatic-latam.com/backendMx/uploads/imagenes_descuentos/91871/da008ca1e1ae03f530d232016d95f1242a3becec.XL2.jpg" alt="Imagen 2" class="treatment-image">
+                                    <img src="https://ajtherapycenter.com/wp-content/uploads/2021/03/54e8dc474257ae14ea89857dc62a357a1038c3e45551764f712d7ad192.jpg" alt="Imagen 3" class="treatment-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Treatment Circuit BO -->
+            <div class="treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('treatment-circuit')">Treatment Circuit
+                    BO</button>
+                <div id="treatment-circuit" class="treatment-content">
+                    <p>Tratamiento de aparatología y vendas venezolanas con una loción activadora de extractos
+                        naturales. El tratamiento es indicado para:</p>
+                    <ul>
+                        <li>✨Moldear</li>
+                        <li>✨Estrías</li>
+                        <li>✨Celulitis o piel naranja</li>
+                        <li>✨Varices o problemas de circulación</li>
+                        <li>✨Piernas cansadas</li>
+                        <li>✨Flacidez</li>
+                        <li>✨Retención de líquidos</li>
+                        <li>✨Sobrepeso</li>
+                        <li>✨Reduce tallas</li>
+                    </ul>
+                    <h3>Comparación de Precios y Sesiones</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Tratamiento</th>
+                                <th>Opción 1</th>
+                                <th>Opción 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Maderoterapia</td>
+                                <td>Maderoterapia</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Masaje Reductivo</td>
+                                <td>Masaje Reductivo</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>10 sesiones de vendas</td>
+                                <td>5 sesiones de vendas</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>10 sesiones de aparatología</td>
+                                <td>5 sesiones de aparatología</td>
+                            </tr>
+                            <tr>
+                                <td>Precio</td>
+                                <td>$6800</td>
+                                <td>$3890</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Facial Rejuvenecedor Intensivo -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('facial-rejuvenecedor')">Facial
+                    Rejuvenecedor Intensivo</button>
+                <div id="facial-rejuvenecedor" class="new-treatment-content">
+                    <div class="new-treatment-details">
+                        <div class="new-details-columns">
+                            <div class="details-column">
+                                <h3>Incluye:</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Limpieza Profunda</li>
+                                    <li><i class="fas fa-check"></i> Exfoliación</li>
+                                    <li><i class="fas fa-check"></i> Vapor ozono</li>
+                                    <li><i class="fas fa-check"></i> Extracción</li>
+                                    <li><i class="fas fa-check"></i> Alta frecuencia</li>
+                                    <li><i class="fas fa-check"></i> Espátula ultrasónica</li>
+                                    <li><i class="fas fa-check"></i> Mascarilla hidratante</li>
+                                </ul>
+                            </div>
+                            <div class="details-column">
+                                <h3>Más Detalles:</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Crema hidratante</li>
+                                    <li><i class="fas fa-check"></i> Relajación facial</li>
+                                    <li><i class="fas fa-check"></i> Ácido hialurónico</li>
+                                    <li><i class="fas fa-check"></i> Protector solar</li>
+                                    <li><i class="fas fa-check"></i> Radio frecuencia</li>
+                                </ul>
+                                <div class="price-details">
+                                    <h2>$950</h2>
+                                    <p>Duración: 1 hora y 30 minutos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamiento papada -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-papada')">Tratamiento
+                    Papada</button>
+                <div id="tratamiento-papada" class="new-treatment-content">
+                    <div class="new-treatment-details">
+                        <div class="new-details-columns">
+                            <div class="details-column">
+                                <h3>Incluye:</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Drenaje linfático</li>
+                                    <li><i class="fas fa-check"></i> Radio Frecuencia</li>
+                                    <li><i class="fas fa-check"></i> Masaje Facial</li>
+                                    <li><i class="fas fa-check"></i> Lipo laser</li>
+                                </ul>
+                            </div>
+                            <div class="details-column">
+                                <img src="https://auroraestetica.cl/wp-content/uploads/2022/03/Imagenes-de-blog-de-Aura-min.jpg"
+                                    alt="Imagen de Papada" class="imgpapaa" />
+                                <div class="price-details">
+                                    <h2>$1500</h2>
+                                    <p>6 sesiones</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tratamiento Anti-Edad -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-anti-edad')">Tratamiento Anti-edad</button>
+                <div id="tratamiento-anti-edad" class="new-treatment-content">
+                    <div class="new-treatment-details">
+                        <div class="new-details-columns">
+                            <div class="details-column">
+                                <h3>Incluye:</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Facial intensivo</li>
+                                    <li><i class="fas fa-check"></i> Radiofrecuencia</li>
+                                    <li><i class="fas fa-check"></i> Drenaje linfático</li>
+                                    <li><i class="fas fa-check"></i> Masaje facial</li>
+                                    <li><i class="fas fa-check"></i> Fototerapia LED</li>
+                                </ul>
+                            </div>
+                            <div class="details-column">
+                                <div class="price-details">
+                                    <h2>$2500</h2>
+                                    <p>6 sesiones</p>
+                                    <p><strong>¡Gratis 1 sesión de papada!</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Facial Limpieza Profunda -->
+            <div class="new-treatment-item">
+                <button class="treatment-button" onclick="toggleNewTreatment('tratamiento-facial')">Facial Limpieza Profunda</button>
+                <div id="tratamiento-facial" class="new-treatment-content">
+                    <div class="new-treatment-details">
+                        <div class="new-details-columns">
+                            <div class="details-column">
+                                <h3>Incluye:</h3>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Limpieza</li>
+                                    <li><i class="fas fa-check"></i> Exfoliación</li>
+                                    <li><i class="fas fa-check"></i> Vapor de ozono</li>
+                                    <li><i class="fas fa-check"></i> Extracción</li>
+                                    <li><i class="fas fa-check"></i> Espátula ultrasónica</li>
+                                    <li><i class="fas fa-check"></i> Alta frecuencia</li>
+                                    <li><i class="fas fa-check"></i> Mascarilla hidratante</li>
+                                    <li><i class="fas fa-check"></i> Crema hidratante</li>
+                                    <li><i class="fas fa-check"></i> Ácido hialurónico con masaje facial</li>
+                                    <li><i class="fas fa-check"></i> Protector solar</li>
+                                </ul>
+                            </div>
+                            <div class="details-column-facial">
+                                <img src="https://m.media-amazon.com/images/I/7114+-BMMKL.jpg" alt="" class="imgpapaa">
+                                <div class="price-details">
+                                    <h2>$550</h2>
+                                    <p>Duración: 1 hora</p>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Social Media Links and Location -->
+    <footer>
+        <!-- Visit Us Section -->
+        <div class="visit-us">
+            <h2>¡Visítanos!</h2>
+        </div>
+        <!-- Location -->
+        <div class="ubicacion">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.24795086035!2d-106.10931118931126!3d28.652293583082216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea431f41d33a97%3A0x25a3f83757995952!2sA.%20F.%20Carbonel%205112%2C%20Panamericana%2C%2031210%20Chihuahua%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1723081867346!5m2!1ses-419!2smx"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <ul class="redes">
+            <li class="icon whats">
+                <span class="tooltip">Whatsapp</span>
+                <span><i class="fab fa-whatsapp"></i></span>
+            </li>
+            <a href="https://www.instagram.com/biby.ortizbo/" target="_blank" class="no-link-style">
+                <li class="icon instagram">
+                    <span class="tooltip">Instagram</span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </li>
+            </a>
+
+            <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+            </li>
+            <li class="icon tiktok">
+                <span class="tooltip">Tiktok</span>
+                <span><i class="fab fa-tiktok"></i></span>
+            </li>
+            <li class="icon tel">
+                <span class="tooltip">Teléfono</span>
+                <a href="tel:+526145329344" class="phone-link">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    </div>
+
+   
+</body>
+
+</html>
