@@ -72,12 +72,51 @@ h1::after {
     object-fit: cover; /* Asegura que la imagen se recorte correctamente */
 }
 
-/* Nombre del perfil */
 .profile-name {
-    font-size: 28px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    text-align: center;
+    padding: 20px;
 }
 
+.profile-name img {
+    max-width: 100%; /* Ajusta la imagen al 100% del contenedor */
+    height: auto;
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .profile-name img {
+        max-width: 60%; /* Aumenta el tamaño máximo en pantallas medianas */
+    }
+}
+
+@media (min-width: 900px) {
+    .profile-name img {
+        max-width: 50%; /* Ajusta el tamaño máximo en pantallas más grandes */
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-name img {
+        max-width: 40%; /* Tamaño máximo para pantallas grandes */
+    }
+}
+
+.info {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    max-width: 800px; /* Ajusta el ancho máximo del texto */
+}
+
+.info p {
+    margin: 0;
+    padding: 0;
+}
 .info {
     display: flex;
     justify-content: center;
@@ -267,7 +306,8 @@ h1::after {
 
 .treatment-button {
     width: 100%;
-    background: linear-gradient(135deg, rgba(69, 16, 16, 0.8), rgba(100, 30, 30, 0.8)); 
+    background: linear-gradient(135deg, rgba(198, 120, 120, 0.8), rgba(198, 120, 120, 0.8));
+
     color: white;
     padding: 12px 20px; 
     border: none;
