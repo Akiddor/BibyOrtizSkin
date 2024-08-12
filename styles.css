@@ -331,30 +331,13 @@ h1::after {
     max-height: 1000px; /* Ajusta un valor alto para permitir el despliegue completo */
 }
 
-    .price-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
-        display: block; /* Hacer que la tabla sea un bloque para permitir el desplazamiento */
-    }
 
-    .price-table th, .price-table td {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        text-align: center;
-        white-space: nowrap; /* Evita que el contenido se ajuste y cause un desbordamiento */
-    }
 
-    .price-table th {
-        background-color: rgba(69, 16, 16, 0.1);
-        color: rgb(69, 16, 16);
-    }
 
-    .price-table td {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
+/* Contenedor de la tabla */
+.price-table th, .price-table td {
+    font-size: 12px; /* Ajusta el tamaño del texto aquí */
+}
 
 
 
