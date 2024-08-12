@@ -336,7 +336,7 @@ h1::after {
 
 /* Contenedor de la tabla */
 .price-table th, .price-table td {
-    font-size: 12px; /* Ajusta el tamaño del texto aquí */
+    font-size: 15px; /* Ajusta el tamaño del texto aquí */
 }
 
 
