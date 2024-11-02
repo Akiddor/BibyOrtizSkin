@@ -1,515 +1,623 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+    @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
-body {
-    color: rgb(69, 16, 16);
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 2px;
-    background-image: url('/img/fondo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
-
-.card-container {
-    max-width: 90%; /* Ajusta el ancho máximo al tamaño de la pantalla */
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #fafafa10;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
-    backdrop-filter: blur(10px); /* Ajusta el desenfoque si es necesario */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-}
-
-/* Efecto de vidrio */
-.glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.4rem);
-    -webkit-backdrop-filter: blur(0.4rem);
-}
-
-/* Título */
-h1 {
-    position: relative;
-    margin-top: 5px;
-    font-family: 'Dancing Script', cursive;
-    margin-bottom: 5px;
-    padding: 0 20px;
-}
-
-/* Líneas decorativas del título */
-h1::before,
-h1::after {
-    content: '';
-    position: absolute;
-    height: 3px;
-    background-color: currentColor;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    transition: all 0.2s ease-in;
-}
-
-h1::before {
-    left: 0;
-}
-
-h1::after {
-    right: 0;
-}
-
-.profile-picture {
-    margin: 2px auto; 
-    height: auto;
-    max-width: 180px; /* Ajusta el tamaño según sea necesario */
-    border-radius: 50%;
-    display: block;
-    object-fit: cover; /* Asegura que la imagen se recorte correctamente */
-}
-
-.profile-name {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra la imagen y el texto horizontalmente */
-    text-align: center;
-    padding: 20px;
-}
-
-.profile-name img {
-    max-width: 100%; /* Ajusta la imagen al 100% del contenedor */
-    height: auto;
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
-    border-radius: 15px; /* Bordes redondeados */
-}
-
-/* Media Queries */
-@media (min-width: 600px) {
-    .profile-name img {
-        max-width: 60%; /* Aumenta el tamaño máximo en pantallas medianas */
+    body {
+        color: rgb(69, 16, 16);
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 2px;
+        background-image: url('/img/fondo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
-}
 
-@media (min-width: 900px) {
-    .profile-name img {
-        max-width: 50%; /* Ajusta el tamaño máximo en pantallas más grandes */
+    .card-container {
+        max-width: 90%; /* Ajusta el ancho máximo al tamaño de la pantalla */
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #fafafa10;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+        backdrop-filter: blur(10px); /* Ajusta el desenfoque si es necesario */
+        overflow: hidden; /* Asegura que el contenido no se desborde */
     }
-}
 
-@media (min-width: 992px) {
-    .profile-name img {
-        max-width: 40%; /* Tamaño máximo para pantallas grandes */
+    /* Efecto de vidrio */
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.4rem);
+        -webkit-backdrop-filter: blur(0.4rem);
     }
-}
 
-.info {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-    max-width: 800px; /* Ajusta el ancho máximo del texto */
-}
+    /* Título */
+    h1 {
+        position: relative;
+        margin-top: 5px;
+        font-family: 'Dancing Script', cursive;
+        margin-bottom: 5px;
+        padding: 0 20px;
+    }
 
-.info p {
-    margin: 0;
-    padding: 0;
-}
-.info {
-    display: flex;
-    justify-content: center;
-}
+    /* Líneas decorativas del título */
+    h1::before,
+    h1::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        background-color: currentColor;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        transition: all 0.2s ease-in;
+    }
 
-/* Información adicional */
-.info p {
-    max-width: 600px;
-    margin: 0;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #3a2c2c;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
+    h1::before {
+        left: 0;
+    }
 
-/* Estilo para la lista de redes sociales en el pie de página */
-.redes {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-}
+    h1::after {
+        right: 0;
+    }
 
-/* Botones de redes sociales */
-.redes .icon {
-    position: relative;
-    background: #fff; /* Fondo blanco */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
+    .profile-picture {
+        margin: 2px auto; 
+        height: auto;
+        max-width: 180px; /* Ajusta el tamaño según sea necesario */
+        border-radius: 50%;
+        display: block;
+        object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+    }
 
-/* Color de los íconos de redes sociales */
-.redes .icon i {
-    color: #C67878; /* Color del ícono en palo rosa */
-}
+    .profile-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra la imagen y el texto horizontalmente */
+        text-align: center;
+        padding: 20px;
+    }
 
-/* Tooltip de redes sociales */
-.redes .tooltip {
-    position: absolute;
-    bottom: 60px;
-    font-size: 14px;
-    background: #000; /* Color de fondo del tooltip */
-    color: #fff; /* Color del texto del tooltip */
-    padding: 5px 8px;
-    border-radius: 5px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
+    .profile-name img {
+        max-width: 100%; /* Ajusta la imagen al 100% del contenedor */
+        height: auto;
+        margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+        border-radius: 15px; /* Bordes redondeados */
+    }
 
-/* Flecha del tooltip */
-.redes .tooltip::before {
-    position: absolute;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background: #000; /* Color de la flecha del tooltip */
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-}
+    /* Media Queries */
+    @media (min-width: 600px) {
+        .profile-name img {
+            max-width: 60%; /* Aumenta el tamaño máximo en pantallas medianas */
+        }
+    }
 
-/* Efecto al pasar el cursor sobre el botón de red social */
-.redes .icon:hover i {
-    color: #C67878; /* Cambiar el color del ícono al pasar el cursor */
-}
+    @media (min-width: 900px) {
+        .profile-name img {
+            max-width: 50%; /* Ajusta el tamaño máximo en pantallas más grandes */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .profile-name img {
+            max-width: 40%; /* Tamaño máximo para pantallas grandes */
+        }
+    }
+
+    .info {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+        max-width: 800px; /* Ajusta el ancho máximo del texto */
+    }
+
+    .info p {
+        margin: 0;
+        padding: 0;
+    }
+    .info {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Información adicional */
+    .info p {
+        max-width: 600px;
+        margin: 0;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #3a2c2c;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    /* Estilo para la lista de redes sociales en el pie de página */
+    .redes {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    /* Botones de redes sociales */
+    .redes .icon {
+        position: relative;
+        background: #fff; /* Fondo blanco */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    /* Color de los íconos de redes sociales */
+    .redes .icon i {
+        color: #C67878; /* Color del ícono en palo rosa */
+    }
+
+    /* Tooltip de redes sociales */
+    .redes .tooltip {
+        position: absolute;
+        bottom: 60px;
+        font-size: 14px;
+        background: #000; /* Color de fondo del tooltip */
+        color: #fff; /* Color del texto del tooltip */
+        padding: 5px 8px;
+        border-radius: 5px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    /* Flecha del tooltip */
+    .redes .tooltip::before {
+        position: absolute;
+        content: "";
+        height: 8px;
+        width: 8px;
+        background: #000; /* Color de la flecha del tooltip */
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    /* Efecto al pasar el cursor sobre el botón de red social */
+    .redes .icon:hover i {
+        color: #C67878; /* Cambiar el color del ícono al pasar el cursor */
+    }
 
 
 
 
 
-.ubicacion {
+    .ubicacion {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-radius: 20px; /* Bordes redondeados */
+        overflow: hidden; /* Oculta las partes del iframe que sobresalen */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    }
+
+    .ubicacion iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .treatments {
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .treatments h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .treatments ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .treatments li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .visit-us {
+        margin: 20px auto; /* Ajusta el margen según sea necesario */
+        text-align: center; /* Centra el texto */
+    }
+
+    .visit-us h2 {
+        font-size: 30px;
+        font-family: 'Dancing Script', cursive; /* Fuente decorativa para el título */
+        color: rgb(69, 16, 16); /* Color del texto */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+    .no-link-style {
+        text-decoration: none; 
+        color: inherit; 
+    }
+
+    .no-link-style:hover, .no-link-style:focus, .no-link-style:active {
+        color: inherit; 
+    }
+
+
+    .phone-link {
+        color: inherit; 
+        text-decoration: none; 
+    }
+
+    .treatments {
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .treatments h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .treatments ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .treatments li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .treatment-item {
+        margin: 20px 0;
+    }
+
+    .treatment-button {
+        width: 100%;
+        background: linear-gradient(135deg, rgba(198, 120, 120, 0.8), rgba(198, 120, 120, 0.8));
+
+        color: white;
+        padding: 12px 20px; 
+        border: none;
+        border-radius: 12px; 
+        text-align: center; 
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+    .treatment-button.active {
+        background-color: rgb(48, 12, 12);
+    }
+
+
+    .treatment-content {
+        display: none;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        margin-top: 10px;
+        overflow: hidden; /* Asegura que el contenido no se desborde */
+        transition: max-height 0.3s ease-out; /* Suaviza la transición de despliegue */
+        overflow-x: auto; /* Permite desplazamiento horizontal en el contenedor */
+    }
+
+    .treatment-content.show {
+        display: block;
+        max-height: 1000px; /* Ajusta un valor alto para permitir el despliegue completo */
+    }
+
+
+    /* Payment Methods Section */
+    .payment-methods {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-methods h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .payment-methods p {
+        font-size: 1em;
+        color: #040404;
+        margin-bottom: 20px;
+    }
+
+    .payment-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .payment-icon {
+        width: 80px;
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .payment-icon:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+/* Estilos generales */
+.price-table {
     width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 20px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta las partes del iframe que sobresalen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
-}
-
-.ubicacion iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.treatments {
-    margin: 20px auto;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.treatments h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-family: 'Dancing Script', cursive;
-}
-
-.treatments ul {
-    list-style: none;
-    padding: 0;
-}
-
-.treatments li {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.visit-us {
-    margin: 20px auto; /* Ajusta el margen según sea necesario */
-    text-align: center; /* Centra el texto */
-}
-
-.visit-us h2 {
-    font-size: 30px;
-    font-family: 'Dancing Script', cursive; /* Fuente decorativa para el título */
-    color: rgb(69, 16, 16); /* Color del texto */
-    margin-bottom: 20px; /* Espacio debajo del título */
-}
-.no-link-style {
-    text-decoration: none; 
-    color: inherit; 
-}
-
-.no-link-style:hover, .no-link-style:focus, .no-link-style:active {
-    color: inherit; 
-}
-
-
-.phone-link {
-    color: inherit; 
-    text-decoration: none; 
-}
-
-.treatments {
-    margin: 20px auto;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.treatments h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-family: 'Dancing Script', cursive;
-}
-
-.treatments ul {
-    list-style: none;
-    padding: 0;
-}
-
-.treatments li {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.treatment-item {
+    border-collapse: collapse;
     margin: 20px 0;
 }
 
-.treatment-button {
-    width: 100%;
-    background: linear-gradient(135deg, rgba(198, 120, 120, 0.8), rgba(198, 120, 120, 0.8));
-
-    color: white;
-    padding: 12px 20px; 
-    border: none;
-    border-radius: 12px; 
-    text-align: center; 
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-.treatment-button.active {
-    background-color: rgb(48, 12, 12);
-}
-
-
-.treatment-content {
-    display: none;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin-top: 10px;
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-    transition: max-height 0.3s ease-out; /* Suaviza la transición de despliegue */
-    overflow-x: auto; /* Permite desplazamiento horizontal en el contenedor */
-}
-
-.treatment-content.show {
-    display: block;
-    max-height: 1000px; /* Ajusta un valor alto para permitir el despliegue completo */
-}
-
-
-/* Payment Methods Section */
-.payment-methods {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.payment-methods h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.payment-methods p {
-    font-size: 1em;
-    color: #040404;
-    margin-bottom: 20px;
-}
-
-.payment-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.payment-icon {
-    width: 80px;
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.payment-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Contenedor de la tabla */
 .price-table th, .price-table td {
-    font-size: 15px; /* Ajusta el tamaño del texto aquí */
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
-
-
-
-
-
-/* Estilos para el nuevo botón de tratamiento */
-.new-treatment-button {
-    width: 100%;
-    background-color: rgb(85, 33, 33);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    text-align: left;
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s ease;
+.price-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
-
-
-.new-treatment-content.show {
-    display: block;
-}
-
-/* Agregar margen a los nuevos ítems de tratamiento */
-.new-treatment-item {
-    margin: 20px 0; 
-}
-
-
-.new-treatment-item {
-    margin: 20px 0; 
-}
-
-.new-treatment-content {
-    display: none; 
-}
-
-.new-treatment-content.show {
-    display: block; 
-}
-
-.new-details-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.details-column {
-    flex: 1;
-    margin: 0;
-    
-}
-.image-gallery {
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.details-column ul {
+.price-table ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.details-column li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding-left: 30px; 
-    position: relative;
+.price-table ul li {
+    text-align: left;
 }
 
-.details-column li i {
-    font-size: 20px;
-    color: rgb(255, 99, 71); 
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+/* Estilos generales */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-.price-details {
-    margin-top: 20px;
+.price-table th, .price-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
-
-
-.price-details p {
-    font-size: 16px;
-    color: #666;
+.price-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
-
-.imgpapaa {
-    width: 120px; 
-    height: 120px; 
-    border-radius: 50%; 
-    object-fit: cover;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    display: block;
+.price-table ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-
-.details-column-facial {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center; 
-    margin: 20px; 
+.price-table ul li {
+    text-align: left;
 }
 
-.details-column-facial img {
-    width: 100px; 
-    height: 100px; 
-    margin-bottom: 15px; 
+/* Estilos específicos para la tabla de Treatment Circuit BO */
+.treatment-circuit-table {
+    width: 100%;
 }
 
-.price-details {
-    margin-top: 10px;
+@media (max-width: 767px) {
+    .treatment-circuit-table thead {
+        display: none;
+    }
+
+    .treatment-circuit-table, 
+    .treatment-circuit-table tbody, 
+    .treatment-circuit-table tr, 
+    .treatment-circuit-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .treatment-circuit-table tr {
+        margin-bottom: 15px;
+    }
+
+    .treatment-circuit-table td {
+        text-align: left;
+        padding-left: 10px; /* Ajusta el padding izquierdo */
+        position: relative;
+    }
+
+    .treatment-circuit-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    .treatment-circuit-table ul {
+        padding-left: 100px; /* Ajusta el padding izquierdo de la lista */
+    }
+
+    .treatment-circuit-table ul li {
+        padding-left: 0; /* Elimina el padding izquierdo de los elementos de la lista */
+    }
 }
 
-.price-details h2 {
-    font-size: 24px;
-    color: #333;
+/* Estilos adicionales para resaltar precios y sesiones */
+.price-table .price {
+    color: #e74c3c; /* Color rojo para los precios */
+    font-weight: bold;
 }
 
-.price-details p {
-    font-size: 16px;
-    color: #666;
+.price-table .sessions {
+    color: #3498db; /* Color azul para las sesiones */
+    font-weight: bold;
 }
+    
 
-.treatment-image {
-    width: 160px; 
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
+
+
+
+    /* Estilos para el nuevo botón de tratamiento */
+    .new-treatment-button {
+        width: 100%;
+        background-color: rgb(85, 33, 33);
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        text-align: left;
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+
+
+    .new-treatment-content.show {
+        display: block;
+    }
+
+    /* Agregar margen a los nuevos ítems de tratamiento */
+    .new-treatment-item {
+        margin: 20px 0; 
+    }
+
+
+    .new-treatment-item {
+        margin: 20px 0; 
+    }
+
+    .new-treatment-content {
+        display: none; 
+    }
+
+    .new-treatment-content.show {
+        display: block; 
+    }
+
+    .new-details-columns {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .details-column {
+        flex: 1;
+        margin: 0;
+        
+    }
+    .image-gallery {
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .details-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .details-column li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-left: 30px; 
+        position: relative;
+    }
+
+    .details-column li i {
+        font-size: 20px;
+        color: rgb(255, 99, 71); 
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .price-details {
+        margin-top: 20px;
+    }
+
+
+
+    .price-details p {
+        font-size: 16px;
+        color: #666;
+    }
+
+
+    .imgpapaa {
+        width: 120px; 
+        height: 120px; 
+        border-radius: 50%; 
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        display: block;
+    }
+
+
+    .details-column-facial {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+        margin: 20px; 
+    }
+
+    .details-column-facial img {
+        width: 100px; 
+        height: 100px; 
+        margin-bottom: 15px; 
+    }
+
+    .price-details {
+        margin-top: 10px;
+    }
+
+    .price-details h2 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .price-details p {
+        font-size: 16px;
+        color: #666;
+    }
+
+    .treatment-image {
+        width: 160px; 
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
